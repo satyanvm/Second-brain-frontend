@@ -23,15 +23,15 @@ export const Card = ({title, link, type}: CardProps) => {
                         
   console.log(link.replace("youtu.be", "youtube.").substring(0,16) + "com/embed" + link.substring(16));
                       
-  return (
-    <div className="font-medium">
+  return ( 
+    <div className=" font-medium"> 
       <div className=" p-4 bg-white rounded-md shadow-md border-gray-200 border max-w-72">
-        <div className=" flex">
+        <div className=" flex">      
           <div className="flex items-center">
             <div className="text-gray-500 ">
                 
             <ShareIcon size="md" />
-            </div>
+            </div> 
             <div className="pl-2">
             {title}   
             </div>    
@@ -58,12 +58,11 @@ export const Card = ({title, link, type}: CardProps) => {
   //    <a href="https://t.co/Xu5Q7CJKpc">pic.twitter.com/Xu5Q7CJKpc</a></p>&mdash; ‎Wojak Codes (@wojakcodes)
   //     <a href="https://twitter.com/wojakcodes/status/1903114253244023155?ref_src=twsrc%5Etfw">March 21, 2025</a>
   //     </blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
-  //    </div> 
-      // }
-      <div className="opacity:0">
+  //    </div>      
+      // } 
+      
     <Tweet id={extractTweetId(link)}  /> 
-    </div>
-  }              
+  }               
      {/* <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script> */}
 </div>
       </div>   
