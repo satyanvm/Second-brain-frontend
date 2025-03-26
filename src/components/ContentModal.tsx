@@ -10,13 +10,14 @@ enum ContentType{
     Youtube = "youtube",    
     Twitter = "twitter"     
 }           
-           
+
+                       
 export function CreateContentModal({open,  onclose }: {open: boolean, onclose: () => void}){  
     const titleRef = useRef<HTMLInputElement>(null);
     const linkRef = useRef<HTMLInputElement>(null);
 
     const [type, setType] = useState(ContentType.Youtube);
-    
+
     async function addContent(){                      
         const title = titleRef.current?.value;
         const link = linkRef.current?.value;
@@ -32,7 +33,7 @@ export function CreateContentModal({open,  onclose }: {open: boolean, onclose: (
                 }     
             )
                    
-            onclose();
+            onclose();        
         } else{
             await axios.post(`http://localhost:3000/api/v1/content`,
                 {                           
@@ -89,7 +90,7 @@ export function CreateContentModal({open,  onclose }: {open: boolean, onclose: (
       </span>
       </div>   
       </div>
-      </div>                                     
+      </div>                                               
 
       </div>
     }      

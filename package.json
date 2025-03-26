@@ -16,7 +16,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",
-    "react-tweet": "^3.2.2"
+    "react-tweet": "^3.2.2",
+    "twitter-widgets": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

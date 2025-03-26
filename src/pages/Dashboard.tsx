@@ -76,11 +76,13 @@ refresh();
                  
               <div className="gap-4 flex flex-wrap">       
           {  
-           contents.map(({type, link, title}) => 
+           contents.map(({type, link, title,  setModalOpen}) => 
                 <Card   
                 title={title}     
                 link={link}        
-                type={type}                
+                type={type}  
+                modalOpen = {modalOpen}
+                setModelOpen = {setModalOpen}              
               ></Card>   
             ) 
             // printing the contents here if it is tweet
