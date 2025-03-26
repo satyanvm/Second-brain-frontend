@@ -7,8 +7,6 @@ interface CardProps{
     title: string;                              
     link: string;                                   
     type: "twitter" | "youtube";
-    modalOpen: boolean;
-    setModalOpen: any;
 }        
                      
 // create a function that will extract the tweet-id from the tweet
@@ -18,8 +16,6 @@ function extractTweetId(url: string): string | null {
 }
   
  
-
-
 // const CustomTweetContainer = (props: any) => (
 //   <TweetContainer {...props} style={{ opacity: 1 }} />
 // );
@@ -52,14 +48,13 @@ export const Card = ({title, link, type}: CardProps) => {
               </div>
           </div>  
         </div>  
-        if(modalOpen){
               <div className="opacity-0.5 pointerEvents-none">   
               {      
               type === "youtube" &&   <iframe width="220" height="250" src={link.replace("youtu.be", "youtube.").substring(0,16) + "com/embed" + link.substring(16)} 
              title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               }         
-       {type === "twitter" && 
+       { type === "twitter" && 
        // <div>
        // <blockquote className="twitter-tweet"><p lang="en" dir="ltr">how’s the badge 👀
        //    <a href="https://t.co/Xu5Q7CJKpc">pic.twitter.com/Xu5Q7CJKpc</a></p>&mdash; ‎Wojak Codes (@wojakcodes)
@@ -67,35 +62,11 @@ export const Card = ({title, link, type}: CardProps) => {
        //     </blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
        //    </div>      
            // } 
-     
          <Tweet id={extractTweetId(link)}  />             
-     
-     
-       }     
-       </div> 
-        } else{
-
-          <div className="opacity-1 pointerEvents-none">   
-          {      
-          type === "youtube" &&   <iframe width="220" height="250" src={link.replace("youtu.be", "youtube.").substring(0,16) + "com/embed" + link.substring(16)} 
-         title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          }         
-   {type === "twitter" && 
-   // <div>
-   // <blockquote className="twitter-tweet"><p lang="en" dir="ltr">how’s the badge 👀
-   //    <a href="https://t.co/Xu5Q7CJKpc">pic.twitter.com/Xu5Q7CJKpc</a></p>&mdash; ‎Wojak Codes (@wojakcodes)
-   //     <a href="https://twitter.com/wojakcodes/status/1903114253244023155?ref_src=twsrc%5Etfw">March 21, 2025</a>
-   //     </blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
-   //    </div>      
-       // } 
- 
-     <Tweet id={extractTweetId(link)}  />             
- 
- 
-   }     
-   </div> 
-        }
+        
+       }              
+       </div>    
+        
              
 </div>
       </div>   

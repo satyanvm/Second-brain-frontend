@@ -14,23 +14,29 @@ export function Signin(ref:any){
     const navigate = useNavigate();
 
     async function signin() {
-
+ 
+        try{
         const username = usernameRef.current?.value;
         const password = passwordRef.current?.value;
         console.log(usernameRef.current.value);
-       const response = await axios.post<{ token: string }>(BACKEND_URL + "/api/v1/signin", {   
-                username,
-                password       
-        })   
+        const response = await axios.post('http://localhost:3000/api/v1/signin', {   
+                    username,
+                    password       
+            })   
 
         const jwt = response.data.token;
+        console.log("Below is response.json.token");
+        console.log(response.data.token);
         //@ts-ignore
         const id = response.data.userId;
         localStorage.setItem("token", jwt);
         localStorage.setItem("theuserid", id);
 
         // redirect user to the dashboard
-       navigate("/dashboard");
+       navigate('/dashboard');
+        } catch(e){
+            console.error(e);
+        }
     }
 
 
