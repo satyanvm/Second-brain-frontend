@@ -72,7 +72,7 @@ refresh();
           <div className="flex p-2 gap-4 flex-wrap display-flex">   
                  
               <div className="gap-4 flex flex-wrap">   
-                      {/* {      
+                      {      
                         contents.map(({type, link, title, userId}) => 
 
                              <Card    
@@ -84,9 +84,9 @@ refresh();
                          ) 
                          // printing the contents here if it is tweet
                        } 
-             */}
-          <Card title = "Arvind sir" link = "https://youtu.be/LwzGyFM28SI?si=4DM7pu8k2DHKuWta" type = "youtube"/>
-              <Card title = "Arvind sir TEDx talk" link = "https://youtu.be/MD4W_e3dJPs?si=f3QF3G9cvb48TDNK" type = "youtube"/> 
+            
+          {/* <Card title = "Arvind sir" link = "https://youtu.be/LwzGyFM28SI?si=4DM7pu8k2DHKuWta" type = "youtube"/>
+              <Card title = "Arvind sir TEDx talk" link = "https://youtu.be/MD4W_e3dJPs?si=f3QF3G9cvb48TDNK" type = "youtube"/>  */}
 
               </div>
 
