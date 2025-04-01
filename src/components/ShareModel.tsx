@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { CrossIcon } from "./Icons/CrossIcon.tsx";
 import axios from "axios";
@@ -8,15 +7,6 @@ import { set } from "mongoose";
 export function ShareContentModel({open,  onclose , shareUrl}: {open: boolean, onclose: () => void, shareUrl: string}){
     //  const [shareUrl, setShareUrl] = useState("");
     
-=======
-import React from "react";
-import { CrossIcon } from "./Icons/CrossIcon.tsx";
-import axios from "axios";
-import { Button } from "./Button.tsx";
-
-export function ShareContentModel({open,  onclose }: {open: boolean, onclose: () => void}){
- 
->>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
     function shareContent(){    
         onclose();
     }
@@ -36,7 +26,6 @@ export function ShareContentModel({open,  onclose }: {open: boolean, onclose: ()
                                 </div>
                                 <br />
                                 <div className="cursor-pointer">
-<<<<<<< HEAD
                                    <Button variant = "primary" size = "md" text = "Copy link" onClick={async () => {
                                                                          onclose()      
                             //   const response = await axios.post('http://localhost:3000/api/v1/brain/share', {
@@ -61,28 +50,6 @@ export function ShareContentModel({open,  onclose }: {open: boolean, onclose: ()
                                    }>  </Button> 
                                   Your url is http://localhost:5173/share/${shareUrl}
 
-=======
-                                   <Button variant = "primary" size = "md" text = "Share Brain" onClick={async () => {
-                                                                         onclose()      
-                              const response = await axios.post('http://localhost:3000/api/v1/brain/share', {
-                                        share: true,
-                                        userId: "ObjectId('67cc525aaa297042d30644eb')"
-                                     },{
-                                        headers: {  
-                                            "Authorization": localStorage.getItem("token")
-                                        }
-                                     });             
-                                     if(response.data){
-                                        const shareUrl = `http://localhost:5173/share/${response.data.hash}`;
-                                        console.log(shareUrl);
-                                        alert(`your share url is ${shareUrl}`);
-                                     } else{
-                                       alert("Response is empty");
-                                     }
-                                   
-                                    }
-                                   }>  </Button> 
->>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
                                 </div>
                                 </div>
                                 </span>

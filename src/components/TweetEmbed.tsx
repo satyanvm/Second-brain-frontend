@@ -18,11 +18,7 @@ const CustomTwitterEmbed = ({tweetUrl}) => {
             const response = await fetch(oEmbedUrl);
 
             if (!response.ok) {
-<<<<<<< HEAD
                 throw new Error(`Twitter API error: ${response.status}`);
-=======
-                throw new Error(`Twitter API erro r: ${response.status}`);
->>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
               }
 
               const data = await response.json();
