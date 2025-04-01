@@ -28,13 +28,21 @@ console.log(shareLink);
                   const thetitle = response.data.content[i].title;
                   console.log(thetitle);
                   // make an api call here, and also define the route to handle this 
+<<<<<<< HEAD
                   const link = response.data.content[i].link;    
+=======
+                  const thelink = response.data.content[i].link;    
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
                   const thetype = response.data.content[i].type;
                return <div>
                     {
                   <Card   
                   title={thetitle}     
+<<<<<<< HEAD
                   link={link}        
+=======
+                  link={thelink}        
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
                   type={thetype}  
                                 
                 ></Card>  

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "secondbrain",
+=======
+  "name": "brainly-main",
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@tailwindcss/vite": "^4.0.17",
     "install": "^0.13.0",
     "npm": "^11.2.0",
@@ -30,4 +35,36 @@
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
   }
+=======
+    "@tailwindcss/vite": "^4.0.4",
+    "@types/axios": "^0.9.36",
+    "axios": "^1.7.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "react-tweet": "^3.2.2",
+    "twitter-widgets": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.4",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.22.0",
+    "vite": "^6.1.0"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
 }

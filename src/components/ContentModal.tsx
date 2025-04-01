@@ -10,12 +10,18 @@ enum ContentType{
     Youtube = "youtube",    
     Twitter = "twitter"     
 }           
+<<<<<<< HEAD
             
+=======
+
+                       
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
 export function CreateContentModal({open,  onclose }: {open: boolean, onclose: () => void}){  
     const titleRef = useRef<HTMLInputElement>(null);
     const linkRef = useRef<HTMLInputElement>(null);
 
     const [type, setType] = useState(ContentType.Youtube);
+<<<<<<< HEAD
     
     async function deleteContent(){
             
@@ -31,6 +37,8 @@ export function CreateContentModal({open,  onclose }: {open: boolean, onclose: (
 
     }
 
+=======
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
 
     async function addContent(){                      
         const title = titleRef.current?.value;
@@ -47,7 +55,11 @@ export function CreateContentModal({open,  onclose }: {open: boolean, onclose: (
                 }     
             )
                    
+<<<<<<< HEAD
             onclose();
+=======
+            onclose();        
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
         } else{
             await axios.post(`http://localhost:3000/api/v1/content`,
                 {                           
@@ -61,6 +73,7 @@ export function CreateContentModal({open,  onclose }: {open: boolean, onclose: (
             onclose();    
             } 
     }
+<<<<<<< HEAD
 
     return <div> 
         {open && 
@@ -71,6 +84,17 @@ export function CreateContentModal({open,  onclose }: {open: boolean, onclose: (
       <div className="opacity-100 h-screen w-screen fixed top-0 left-0 flex justify-center">
       <div className="flex flex-col justify-center">
           <span className="bg-white opacity-100 p-4 rounded"> 
+=======
+  
+    return <div> 
+        {open &&   
+        <div className="opacity-100">          
+        <div className = "opacity-100 w-screen h-screen bg-slate-500 fixed top-0 left-0 flex justify-center">
+
+      <div className="opacity-100 h-screen w-screen fixed top-0 left-0 flex justify-center">
+      <div className="flex flex-col justify-center">
+          <span className="bg-white p-4 rounded">   
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
             <div className="flex justify-end">  
                 <div className="cursor-pointer" onClick={onclose}>       
                 <CrossIcon/>  
@@ -105,7 +129,27 @@ export function CreateContentModal({open,  onclose }: {open: boolean, onclose: (
       </span>
       </div>   
       </div>
+<<<<<<< HEAD
       </div>
     }      
     </div>
 }
+=======
+      </div>                                               
+
+      </div>
+    }      
+    </div>
+
+}
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 98e90df30015edac02beaadb164bcf50275a864d
